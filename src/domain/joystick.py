@@ -1,4 +1,5 @@
 import math
+#暂时未使用，传入参数已经计算为角度
 
 def angle(x, y):
     if x != 0 and y != 0:
@@ -20,3 +21,4 @@ def angle(x, y):
 
 def distance(x, y):
     return math.sqrt(x*x + y*y)
+

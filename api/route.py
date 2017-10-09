@@ -1,6 +1,6 @@
 from aiohttp import web
 import socketio
-from src.domain import joystick
+from src.service import wheel_service
 
 sio = socketio.AsyncServer()
 app = web.Application()
@@ -15,10 +15,9 @@ async def connect(sid, environ):
 
 @sio.on('joystick')
 async def joystick_handle(sid, data):
-    print("joystick x> ", data[0], 'y>', data[1])
-    print("distance: %d" % joystick.distance(data[0], data[1]))
-    if data[0] != 0 and data[1] != 0:
-        print("angle: %d" % joystick.angle(data[0], data[1]))
+    angle = data[0]
+    power = data[1]
+    wheel_service.control(angle, power)
 
 
 @sio.on('joystick_hold')
