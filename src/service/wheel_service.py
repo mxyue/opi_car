@@ -7,19 +7,19 @@ from time import sleep
 
 gpio.init()
 
-# l1
+# r1
 pinL11 = connector.gpio1p31
 pinL12 = connector.gpio1p33
 
-# l2
+# r2
 pinL21 = connector.gpio1p40
 pinL22 = connector.gpio1p38
 
-# r1
+# l1
 pinR11 = connector.gpio1p35
 pinR12 = connector.gpio1p37
 
-# r2
+#l2
 pinR21 = connector.gpio1p36
 pinR22 = connector.gpio1p32
 
@@ -46,12 +46,12 @@ def switch(p1, p2, f):
                 setHighPin(p2)
                 setLowPin(p1)
         elif f == 0:
-                setLowPin(p1)        
+                setLowPin(p1)
                 setLowPin(p2)
 
 
 def r1(f):
-        switch(pinR11, pinR12, f)      
+        switch(pinR11, pinR12, f)
 
 def r2(f):
         switch(pinR21, pinR22, f)
@@ -88,7 +88,7 @@ def control(angle, distance):
                 #左
                 r1(1)
                 r2(1)
-                l1(-1)
+                l1(0)
                 l2(-1)
         elif angle > 202 and angle <= 247:
                 #左下
@@ -110,7 +110,7 @@ def control(angle, distance):
                 l2(-1)
         else:
                 #右
-                r1(-1)
+                r1(0)
                 r2(-1)
                 l1(1)
                 l2(1)
