@@ -8,16 +8,16 @@ from time import sleep
 gpio.init()
 
 # r1
-pinR11 = connector.gpio1p31
-pinR12 = connector.gpio1p33
+pinR11 = connector.gpio1p33
+pinR12 = connector.gpio1p31
 
 # r2
 pinR21 = connector.gpio1p38
 pinR22 = connector.gpio1p40
 
 # l1
-pinL11 = connector.gpio1p35
-pinL12 = connector.gpio1p37
+pinL11 = connector.gpio1p37
+pinL12 = connector.gpio1p35
 
 #l2
 pinL21 = connector.gpio1p32
@@ -66,7 +66,7 @@ def l2(f):
 def control(angle, distance):
         if distance == 0 :
                 stop()
-        if angle > 22 and angle <= 67:
+        elif angle > 22 and angle <= 67:
                 #右上
                 r1(0)
                 r2(0)
