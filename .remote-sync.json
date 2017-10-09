@@ -1,0 +1,15 @@
+{
+  "transport": "scp",
+  "hostname": "192.168.1.38",
+  "port": 22,
+  "username": "root",
+  "useAgent": true,
+  "target": "/root/pi_control",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "watch":[
+    "*",
+  ]
+}
