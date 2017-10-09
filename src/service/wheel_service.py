@@ -7,21 +7,21 @@ from time import sleep
 
 gpio.init()
 
+# l1
+pinL11 = connector.gpio1p31
+pinL12 = connector.gpio1p33
+
+# l2
+pinL21 = connector.gpio1p40
+pinL22 = connector.gpio1p38
+
 # r1
-pinR11 = connector.gpio1p33
-pinR12 = connector.gpio1p31
+pinR11 = connector.gpio1p35
+pinR12 = connector.gpio1p37
 
 # r2
-pinR21 = connector.gpio1p38
-pinR22 = connector.gpio1p40
-
-# l1
-pinL11 = connector.gpio1p37
-pinL12 = connector.gpio1p35
-
-#l2
-pinL21 = connector.gpio1p32
-pinL22 = connector.gpio1p36
+pinR21 = connector.gpio1p36
+pinR22 = connector.gpio1p32
 
 
 def setHighPin(pin):
