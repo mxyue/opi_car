@@ -34,7 +34,7 @@ def setLowPin(pin):
 
 
 def stop():
-        for pin in [pin1, pin2]:
+        for pin in [pinR11, pinR12, pinR21, pinR22, pinL11, pinL12, pinL21, pinL22]:
                 setLowPin(pin)
 
 
